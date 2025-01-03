@@ -1,2 +1,2 @@
-# learning-HTML
-study about HTML in online website
+# learning-FRONTEND
+study about HTML, JavaScript and CSS in online website
