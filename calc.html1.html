@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator online</title>
+    <style>
+        body {
+            background-color: pink;
+        }
+        input{
+            width: 100px;
+            height: 50px;
+            font-size: larger;
+            margin: 2.5px;
+            border: 1px;
+            border-radius: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <form name="Calculator"> 
+        <input type="textfiled" id="tela" style="width: 420px; text-align: center;"><br>
+        <input type="button" value="7" onclick="mostrarnodisplay(7)">
+        <input type="button" value="8" onclick="mostrarnodisplay(8)">
+        <input type="button" value="9" onclick="mostrarnodisplay(9)">
+        <input type="button" value="/" onclick="mostrarnodisplay('/')" style="background-color: rgb(113, 113, 240); color: azure;"><br>
+        <input type="button" value="4" onclick="mostrarnodisplay(4)">
+        <input type="button" value="5" onclick="mostrarnodisplay(5)">
+        <input type="button" value="6" onclick="mostrarnodisplay(6)">
+        <input type="button" value="*" onclick="mostrarnodisplay('*')" style="background-color: rgb(113, 113, 240); color: azure;"><br>
+        <input type="button" value="1" onclick="mostrarnodisplay(1)">
+        <input type="button" value="2" onclick="mostrarnodisplay(2)">
+        <input type="button" value="3" onclick="mostrarnodisplay(3)">
+        <input type="button" value="-" onclick="mostrarnodisplay('-')" style="background-color: rgb(113, 113, 240); color: azure;"><br>
+        <input type="button" value="0" onclick="mostrarnodisplay(0)">
+        <input type="button" value="+" onclick="mostrarnodisplay('+')" style="background-color: rgb(113, 113, 240); color: azure;">
+        <input type="reset" value="Reset"> 
+        <input type="button" value="=" onclick="resultadofinal('=')" style="background-color: rgb(35, 35, 196); color: azure;"><br>
+       
+    </form>
+    <script>
+        function mostrarnodisplay(novoValor) {
+            const valorAnTigo = document.getElementById("tela").value
+            document.getElementById("tela").value = valorAnTigo + novoValor
+        }
+
+        function mostrarnodisplay1(resultadofinal1){
+            const resultado = document.getElementById("tela").value
+            document.getElementById("tela").value = resultadofinal1
+        }
+
+        function resultadofinal(params) {
+            const valor = document.getElementById("tela").value
+            document.getElementById("tela").value = eval(valor)
+        }
+
+        setInterval(() => {location.reload();}, 5000);
+    </script>
+</body>
+
+</html>
